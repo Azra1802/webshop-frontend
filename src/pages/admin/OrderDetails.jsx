@@ -12,7 +12,7 @@ export default function OrderDetails() {
   const statuses = ["pending", "accepted", "completed", "rejected"];
 
   useEffect(() => {
-    fetch(`http://localhost:8000/orders/${id}`)
+    fetch(`https://web-production-1b3894.up.railway.app/orders/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Order not found");
         return res.json();
@@ -30,7 +30,7 @@ export default function OrderDetails() {
     setMessage("");
 
     try {
-      await axios.put(`http://localhost:8000/orders/${id}/status`, null, {
+      await axios.put(`https://web-production-1b3894.up.railway.app/orders/${id}/status`, null, {
         params: { new_status: newStatus },
       });
       setMessage("Status updated successfully");

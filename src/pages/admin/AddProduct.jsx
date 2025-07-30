@@ -31,7 +31,7 @@ export default function AddProduct() {
         quantity: parseInt(product.quantity, 10),
       };
 
-      await axios.post("http://localhost:8000/products", payload);
+      await axios.post("https://web-production-1b3894.up.railway.app/products", payload);
       setMessage("Product added successfully!");
       setProduct({
         name: "",

@@ -12,7 +12,7 @@ export default function AdminLogin() {
     setError(null);
 
     try {
-      const response = await fetch("http://localhost:8000/admin/login", {
+      const response = await fetch("https://web-production-1b3894.up.railway.app/admin/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

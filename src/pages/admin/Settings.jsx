@@ -28,7 +28,7 @@ export default function Settings() {
 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:8000/admin/change-password", {
+      const res = await fetch("https://web-production-1b3894.up.railway.app/admin/change-password", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

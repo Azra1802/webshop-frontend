@@ -12,7 +12,7 @@ export default function OrderList() {
   const statuses = ["pending", "accepted", "completed", "rejected"];
 
   useEffect(() => {
-    fetch("http://localhost:8000/orders")
+    fetch("https://web-production-1b3894.up.railway.app/orders/")
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);

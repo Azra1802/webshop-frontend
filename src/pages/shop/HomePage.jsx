@@ -8,7 +8,7 @@ import { ChevronUpDownIcon, CheckIcon } from "@heroicons/react/20/solid";
 export default function ShopHome() {
   const [products, setProducts] = useState([]);
   const [filtered, setFiltered] = useState([]);
-  const [sort, setSort] = useState(""); // počinjemo s praznim - za placeholder
+  const [sort, setSort] = useState(""); 
   const [search, setSearch] = useState("");
   const [priceRange, setPriceRange] = useState([0, 1000]);
 
@@ -42,8 +42,8 @@ export default function ShopHome() {
     );
 
     result.sort((a, b) => {
-      const dateA = new Date(a.created_at);
-      const dateB = new Date(b.created_at);
+      const dateA = new Date(a.publish_date);
+      const dateB = new Date(b.publish_date);
       if (sort === "oldest") {
         return dateA - dateB;
       } else {

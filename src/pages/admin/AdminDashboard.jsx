@@ -9,11 +9,11 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const productsRes = await fetch("http://localhost:8000/products");
+        const productsRes = await fetch("https://web-production-1b3894.up.railway.app/products");
         const productsData = await productsRes.json();
         setTotalProducts(productsData.length);
 
-        const ordersRes = await fetch("http://localhost:8000/orders");
+        const ordersRes = await fetch("https://web-production-1b3894.up.railway.app/orders/");
         const ordersData = await ordersRes.json();
 
         const pending = ordersData.filter((o) => o.status === "pending").length;

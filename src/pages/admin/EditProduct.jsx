@@ -11,7 +11,7 @@ export default function EditProduct() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/products/${id}`)
+      .get(`https://web-production-1b3894.up.railway.app/products/${id}`)
       .then((res) => {
         setProduct(res.data);
         setLoading(false);
@@ -25,7 +25,7 @@ export default function EditProduct() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:8000/products/${id}`, product)
+      .put(`https://web-production-1b3894.up.railway.app/products/${id}`, product)
       .then(() => {
         setMessage("Product updated successfully!");
         setTimeout(() => setMessage(""), 4000);

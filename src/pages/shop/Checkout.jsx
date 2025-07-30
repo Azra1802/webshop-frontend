@@ -40,7 +40,9 @@ export default function Checkout() {
     };
 
     try {
-      const response = await fetch("http://localhost:8000/orders", {
+      console.log("URL za fetch:", `${import.meta.env.VITE_BACKEND_URL}/orders`);
+
+      const response = await fetch("https://web-production-1b3894.up.railway.app/orders/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(orderPayload),

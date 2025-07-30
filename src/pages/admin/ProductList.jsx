@@ -18,8 +18,27 @@ export default function ProductList() {
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 5;
 
+  const handleDelete = async (id) => {
+    if (!window.confirm("Are you sure you want to delete this product?")) return;
+
+    try {
+      const response = await fetch(`https://web-production-1b3894.up.railway.app/products/${id}`, {
+        method: "DELETE",
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to delete product");
+      }
+
+      // Ukloni iz local state
+      setProducts((prev) => prev.filter((p) => p.id !== id));
+    } catch (error) {
+      alert("Error: " + error.message);
+    }
+  };
+
   useEffect(() => {
-    fetch("http://localhost:8000/products")
+    fetch("https://web-production-1b3894.up.railway.app/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -118,7 +137,7 @@ export default function ProductList() {
               Edit
             </Link>
             <button
-              onClick={() => alert(`Delete product ${p.name}?`)}
+              onClick={() => handleDelete(p.id)}
               className="text-red-600 hover:text-red-800 transition"
             >
               Delete
