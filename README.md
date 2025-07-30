@@ -1,12 +1,29 @@
-# React + Vite
+Frontend web aplikacije za online prodaju (Web Shop) razvijene kao testni zadatak. Sistem omogućava korisnicima da pregledaju proizvode i kreiraju narudžbe, dok admin korisnici mogu upravljati proizvodima i narudžbama.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Korisnici
+1. Gost korisnik:
+Može pregledati sve proizvode
+Može pretraživati i sortirati proizvode
+Može izvršiti narudžbu
 
-Currently, two official plugins are available:
+2. Admin korisnik:
+Prijava putem korisničkog imena i šifre
+Pregled, dodavanje, uređivanje i brisanje proizvoda
+Pregled i promjena statusa narudžbi
+Promjena šifre
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+URL-ovi
+Web Shop: https://webshop-neptis-frontend.vercel.app
+Admin login: https://webshop-neptis-frontend.vercel.app/admin
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Pokretanje
+1. Klonirajnje repozitorija:
+   git clone <frontend-repo-url> cd <frontend-folder>
+2. Instaliranje dependencies:
+   npm install
+3.Pokretanje razvojnog servera:
+  npm run dev
+4. Aplikacija je dostupna na http://localhost:5173/
+
+
