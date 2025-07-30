@@ -14,8 +14,8 @@ Promjena šifre
 
 
 URL-ovi
-Web Shop: https://webshop-neptis-frontend.vercel.app
-Admin login: https://webshop-neptis-frontend.vercel.app/admin
+Web Shop: https://webshop-frontend-amber.vercel.app/
+Admin login: https://webshop-frontend-amber.vercel.app/admin
 
 Pokretanje
 1. Klonirajnje repozitorija:
